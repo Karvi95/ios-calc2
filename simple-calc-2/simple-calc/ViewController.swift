@@ -257,7 +257,7 @@ class ViewController: UIViewController {
         }
     
         // Set eval as output to be displayed.
-        EvaluatedResults.text = "Result: \(eval)"
+        EvaluatedResults.text = "\(eval)"
         
     }
     
