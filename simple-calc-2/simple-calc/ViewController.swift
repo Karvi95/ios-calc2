@@ -261,6 +261,10 @@ class ViewController: UIViewController {
         
     }
     
+    // Initiate History
+    @IBAction func SegueToHistory(sender: UIButton) {
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
