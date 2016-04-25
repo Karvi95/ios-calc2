@@ -272,7 +272,7 @@ class ViewController: UIViewController {
                         eval = eval / elemSize
                     }
                 }
-            
+             
                 targetString += String(next)
                 targetString += " "
                 
