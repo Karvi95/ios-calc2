@@ -93,10 +93,10 @@
 			children = (
 				9DDAA0411CC721600084C673 /* AppDelegate.swift */,
 				9D5B9A891CC7FDFB00297287 /* AppModel.swift */,
+				9DDAA04A1CC721600084C673 /* LaunchScreen.storyboard */,
 				9DDAA0431CC721600084C673 /* ViewController.swift */,
 				9DDAA0451CC721600084C673 /* Main.storyboard */,
 				9DDAA0481CC721600084C673 /* Assets.xcassets */,
-				9DDAA04A1CC721600084C673 /* LaunchScreen.storyboard */,
 				9DDAA04D1CC721600084C673 /* Info.plist */,
 			);
 			path = "simple-calc";

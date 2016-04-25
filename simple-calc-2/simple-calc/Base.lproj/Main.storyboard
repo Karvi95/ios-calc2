@@ -231,20 +231,6 @@
                                     <action selector="PressedZero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4it-L3-6fa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlD-oM-WMm">
-                                <rect key="frame" x="0.0" y="545" width="600" height="55"/>
-                                <color key="backgroundColor" red="0.44313510672782175" green="0.97319542920799795" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="w49-An-RXp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="29"/>
-                                <state key="normal" title="History">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="SegueToHistory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1hw-9H-i72"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbe-22-BgY">
                                 <rect key="frame" x="301" y="400" width="149" height="64"/>
                                 <color key="backgroundColor" red="0.83033853527756152" green="0.49014301354007295" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -321,6 +307,21 @@
                                     <rect key="frame" x="78" y="153" width="245" height="62"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlD-oM-WMm">
+                                <rect key="frame" x="0.0" y="545" width="600" height="55"/>
+                                <color key="backgroundColor" red="0.44313510672782175" green="0.97319542920799795" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="w49-An-RXp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="29"/>
+                                <state key="normal" title="History">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="SegueToHistory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1hw-9H-i72"/>
+                                    <segue destination="gVk-og-Z3p" kind="show" id="6rB-yg-XLP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -536,7 +537,7 @@
         <!--View Controller-->
         <scene sceneID="d4k-P5-04V">
             <objects>
-                <viewController id="gVk-og-Z3p" sceneMemberID="viewController">
+                <viewController id="gVk-og-Z3p" customClass="ViewController" customModule="simple_calc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zat-YX-TQ1"/>
                         <viewControllerLayoutGuide type="bottom" id="FUP-gh-Utc"/>
@@ -550,7 +551,18 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GtR-w5-4uV">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="555"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFz-4k-7Vn">
+                                                <rect key="frame" x="31" y="25" width="34" height="30"/>
+                                                <state key="normal" title="Back">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="show" id="BuB-Po-VVc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                     </view>
                                 </subviews>
                             </scrollView>

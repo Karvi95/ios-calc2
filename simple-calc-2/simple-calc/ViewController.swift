@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     var index = 0
     var display = ""
     
+    // History
+    var oldInputs : [String] = []
+    
     // Store Numbers in an array
     let StoreNumbersModel : StoreNumbers = StoreNumbers()
     
@@ -200,18 +203,27 @@ class ViewController: UIViewController {
         let operSize = StoreOperationsModel.operands.count
         var operCheck = ""
         
+        // Build String for History
+        var targetString = ""
         
         if ((elemSize - operSize == 1) || (elemSize == 1 && operSize == 1 && StoreOperationsModel.operands[0] == "fact")) {
             let firstInput = StoreNumbersModel.elements.removeAtIndex(0)
+            
+            targetString += firstInput
+            targetString += " "
+            
             eval += Int(firstInput)!
             
             let operation = StoreOperationsModel.operands[0]
+            
             if operation == "fact" {
+                
+                targetString += "fact "
+                
                 operCheck = "fact"
             }
             while (!StoreNumbersModel.elements.isEmpty && !StoreOperationsModel.operands.isEmpty) {
                 let operation = StoreOperationsModel.operands.removeAtIndex(0)
-
                 var next = 0
             
                 if !StoreNumbersModel.elements.isEmpty {
@@ -221,25 +233,49 @@ class ViewController: UIViewController {
                 }
                 
                 if operation == "+" {
+                    
+                    targetString += "+ "
+                    
                     eval = eval + next
                 } else if operation == "-" {
+                    
+                    targetString += "- "
+                    
                     eval = eval - next
                 } else if operation == "*" {
+                    
+                    targetString += "* "
+                    
                     eval = eval * next
                 } else if operation == "/" {
+                    
+                    targetString += "/ "
+                    
                     eval = eval / next
                 } else if operation == "%" {
+                    
+                    targetString += "% "
+                    
                     eval = eval % next
                 } else if operation == "count" {
+                    
+                    targetString += "count "
+                    
                     operCheck = "count"
                     eval = eval + 1
                 } else if operation == "avg" {
+                    
+                    targetString += "avg "
+                    
                     eval = eval + next
                     if StoreOperationsModel.operands.isEmpty {
                         eval = eval / elemSize
                     }
                 }
             
+                targetString += String(next)
+                targetString += " "
+                
                 i = i + 1
             
             }
@@ -255,7 +291,9 @@ class ViewController: UIViewController {
         } else {
             EvaluatedResults.text = "Improper input!"
         }
-    
+        targetString += "= \(eval)"
+        oldInputs.append(targetString)
+        
         // Set eval as output to be displayed.
         EvaluatedResults.text = "\(eval)"
         
