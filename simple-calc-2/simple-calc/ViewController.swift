@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     // History
     var oldInputs : [String] = []
+    
     @IBOutlet weak var DisplayHistory: UILabel!
     
     // Store Numbers in an array
@@ -307,9 +308,9 @@ class ViewController: UIViewController {
         var build = ""
         for i in 0..<oldInputs.count {
             build += oldInputs[i]
-//            build += "\n"
+            build += "\n"
         }
-        //DisplayHistory.text = "\(build)"
+        //DisplayHistory.text = build
     }
     
     

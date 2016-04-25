@@ -295,21 +295,6 @@
                                     <action selector="Add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9pa-Cl-mva"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlD-oM-WMm">
-                                <rect key="frame" x="0.0" y="545" width="600" height="55"/>
-                                <color key="backgroundColor" red="0.44313510672782175" green="0.97319542920799795" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="w49-An-RXp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="29"/>
-                                <state key="normal" title="History">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="SegueToHistory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1hw-9H-i72"/>
-                                    <segue destination="gVk-og-Z3p" kind="show" id="6rB-yg-XLP"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlM-3C-x4M">
                                 <rect key="frame" x="26" y="65" width="548" height="88"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="52"/>
@@ -322,6 +307,21 @@
                                     <rect key="frame" x="78" y="153" width="245" height="62"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlD-oM-WMm">
+                                <rect key="frame" x="0.0" y="545" width="600" height="55"/>
+                                <color key="backgroundColor" red="0.44313510672782175" green="0.97319542920799795" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="w49-An-RXp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="29"/>
+                                <state key="normal" title="History">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SegueToHistory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJQ-pc-6ek"/>
+                                    <segue destination="gVk-og-Z3p" kind="show" id="6rB-yg-XLP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -576,20 +576,21 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4zm-8c-hnc">
                                 <rect key="frame" x="20" y="28" width="560" height="555"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GtR-w5-4uV">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GtR-w5-4uV">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="555"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFz-4k-7Vn">
-                                                <rect key="frame" x="31" y="25" width="34" height="30"/>
-                                                <state key="normal" title="Back">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFz-4k-7Vn">
+                                                <rect key="frame" x="33" y="25" width="32" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                                <state key="normal" title="&lt;---">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="BYZ-38-t0r" kind="show" id="BuB-Po-VVc"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ak-9o-TaJ">
-                                                <rect key="frame" x="31" y="63" width="42" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="No History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzf-C2-99f">
+                                                <rect key="frame" x="33" y="63" width="81" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -598,12 +599,12 @@
                                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="LFz-4k-7Vn" firstAttribute="leading" secondItem="GtR-w5-4uV" secondAttribute="leading" constant="31" id="1Pe-an-OUN"/>
-                                            <constraint firstItem="3Ak-9o-TaJ" firstAttribute="top" secondItem="LFz-4k-7Vn" secondAttribute="bottom" constant="8" id="7QC-fo-Mud"/>
+                                            <constraint firstAttribute="trailing" secondItem="kzf-C2-99f" secondAttribute="trailing" constant="487" id="3Mq-Hd-CTX"/>
                                             <constraint firstItem="LFz-4k-7Vn" firstAttribute="top" secondItem="GtR-w5-4uV" secondAttribute="top" constant="25" id="7z8-1v-GLA"/>
-                                            <constraint firstAttribute="bottom" secondItem="3Ak-9o-TaJ" secondAttribute="bottom" constant="471" id="Oh7-It-P7b"/>
-                                            <constraint firstItem="3Ak-9o-TaJ" firstAttribute="leading" secondItem="GtR-w5-4uV" secondAttribute="leading" constant="31" id="U3r-5T-eT1"/>
-                                            <constraint firstAttribute="trailing" secondItem="3Ak-9o-TaJ" secondAttribute="trailing" constant="487" id="b0i-uz-GHW"/>
+                                            <constraint firstItem="kzf-C2-99f" firstAttribute="leading" secondItem="GtR-w5-4uV" secondAttribute="leading" constant="31" id="8YS-UN-RHH"/>
+                                            <constraint firstItem="kzf-C2-99f" firstAttribute="top" secondItem="LFz-4k-7Vn" secondAttribute="bottom" constant="8" id="cC9-T9-tPN"/>
                                             <constraint firstAttribute="trailing" secondItem="LFz-4k-7Vn" secondAttribute="trailing" constant="495" id="gDM-W2-JlC"/>
+                                            <constraint firstAttribute="bottom" secondItem="kzf-C2-99f" secondAttribute="bottom" constant="471" id="qcC-pc-zOa"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -613,7 +614,7 @@
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="DisplayHistory" destination="3Ak-9o-TaJ" id="xWd-Vn-X3s"/>
+                        <outlet property="DisplayHistory" destination="kzf-C2-99f" id="1aq-af-sDt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNq-hO-S4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
