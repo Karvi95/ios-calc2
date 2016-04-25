@@ -576,10 +576,10 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4zm-8c-hnc">
                                 <rect key="frame" x="20" y="28" width="560" height="555"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GtR-w5-4uV">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GtR-w5-4uV">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="555"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFz-4k-7Vn">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFz-4k-7Vn">
                                                 <rect key="frame" x="31" y="25" width="34" height="30"/>
                                                 <state key="normal" title="Back">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -588,14 +588,23 @@
                                                     <segue destination="BYZ-38-t0r" kind="show" id="BuB-Po-VVc"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ak-9o-TaJ">
-                                                <rect key="frame" x="481" y="46" width="42" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ak-9o-TaJ">
+                                                <rect key="frame" x="31" y="63" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="LFz-4k-7Vn" firstAttribute="leading" secondItem="GtR-w5-4uV" secondAttribute="leading" constant="31" id="1Pe-an-OUN"/>
+                                            <constraint firstItem="3Ak-9o-TaJ" firstAttribute="top" secondItem="LFz-4k-7Vn" secondAttribute="bottom" constant="8" id="7QC-fo-Mud"/>
+                                            <constraint firstItem="LFz-4k-7Vn" firstAttribute="top" secondItem="GtR-w5-4uV" secondAttribute="top" constant="25" id="7z8-1v-GLA"/>
+                                            <constraint firstAttribute="bottom" secondItem="3Ak-9o-TaJ" secondAttribute="bottom" constant="471" id="Oh7-It-P7b"/>
+                                            <constraint firstItem="3Ak-9o-TaJ" firstAttribute="leading" secondItem="GtR-w5-4uV" secondAttribute="leading" constant="31" id="U3r-5T-eT1"/>
+                                            <constraint firstAttribute="trailing" secondItem="3Ak-9o-TaJ" secondAttribute="trailing" constant="487" id="b0i-uz-GHW"/>
+                                            <constraint firstAttribute="trailing" secondItem="LFz-4k-7Vn" secondAttribute="trailing" constant="495" id="gDM-W2-JlC"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
