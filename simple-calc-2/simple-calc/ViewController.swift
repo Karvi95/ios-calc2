@@ -17,11 +17,13 @@ class ViewController: UIViewController {
     
     // History
     var oldInputs : [String] = []
+    @IBOutlet weak var DisplayHistory: UILabel!
     
     // Store Numbers in an array
     let StoreNumbersModel : StoreNumbers = StoreNumbers()
     
     @IBOutlet weak var EvaluatedResults: UILabel!
+
     
     
     @IBAction func PressedZero(sender: UIButton) {
@@ -291,6 +293,7 @@ class ViewController: UIViewController {
         } else {
             EvaluatedResults.text = "Improper input!"
         }
+        
         targetString += "= \(eval)"
         oldInputs.append(targetString)
         
@@ -301,6 +304,12 @@ class ViewController: UIViewController {
     
     // Initiate History
     @IBAction func SegueToHistory(sender: UIButton) {
+        var build = ""
+        for i in 0..<oldInputs.count {
+            build += oldInputs[i]
+//            build += "\n"
+        }
+        DisplayHistory.text = "\(build)"
     }
     
     
