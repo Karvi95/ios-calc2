@@ -310,7 +310,7 @@ class ViewController: UIViewController {
             build += oldInputs[i]
             build += "\n"
         }
-        //DisplayHistory.text = build
+        DisplayHistory.text = build
     }
     
     
