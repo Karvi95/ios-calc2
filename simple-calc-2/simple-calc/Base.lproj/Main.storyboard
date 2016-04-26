@@ -317,7 +317,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="29"/>
                                 <state key="normal" title="History">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -325,6 +325,10 @@
                                         <exclude reference="awL-mF-vdZ"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="DisplayHistory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wqu-Pc-cDZ"/>
+                                    <segue destination="gVk-og-Z3p" kind="show" identifier="HistorySegue" id="KNt-sO-URo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -586,10 +590,10 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="BuB-Po-VVc"/>
+                                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ReturnSegue" id="BuB-Po-VVc"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="No History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzf-C2-99f">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANO-Na-TcW">
                                                 <rect key="frame" x="33" y="63" width="81" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -599,12 +603,8 @@
                                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="LFz-4k-7Vn" firstAttribute="leading" secondItem="GtR-w5-4uV" secondAttribute="leading" constant="31" id="1Pe-an-OUN"/>
-                                            <constraint firstAttribute="trailing" secondItem="kzf-C2-99f" secondAttribute="trailing" constant="487" id="3Mq-Hd-CTX"/>
                                             <constraint firstItem="LFz-4k-7Vn" firstAttribute="top" secondItem="GtR-w5-4uV" secondAttribute="top" constant="25" id="7z8-1v-GLA"/>
-                                            <constraint firstItem="kzf-C2-99f" firstAttribute="leading" secondItem="GtR-w5-4uV" secondAttribute="leading" constant="31" id="8YS-UN-RHH"/>
-                                            <constraint firstItem="kzf-C2-99f" firstAttribute="top" secondItem="LFz-4k-7Vn" secondAttribute="bottom" constant="8" id="cC9-T9-tPN"/>
                                             <constraint firstAttribute="trailing" secondItem="LFz-4k-7Vn" secondAttribute="trailing" constant="495" id="gDM-W2-JlC"/>
-                                            <constraint firstAttribute="bottom" secondItem="kzf-C2-99f" secondAttribute="bottom" constant="471" id="qcC-pc-zOa"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -614,12 +614,12 @@
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="DisplayHistory" destination="kzf-C2-99f" id="1aq-af-sDt"/>
+                        <outlet property="Historylist" destination="ANO-Na-TcW" id="dQM-1m-kq1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNq-hO-S4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2669" y="628"/>
+            <point key="canvasLocation" x="2642" y="628"/>
         </scene>
     </scenes>
 </document>
