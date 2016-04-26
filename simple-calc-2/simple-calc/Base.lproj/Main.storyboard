@@ -326,7 +326,6 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="DisplayHistory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wqu-Pc-cDZ"/>
                                     <segue destination="gVk-og-Z3p" kind="show" identifier="HistorySegue" id="KNt-sO-URo"/>
                                 </connections>
                             </button>
@@ -590,13 +589,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4zm-8c-hnc">
-                                <rect key="frame" x="20" y="28" width="560" height="555"/>
+                                <rect key="frame" x="20" y="14" width="560" height="555"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GtR-w5-4uV">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="555"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFz-4k-7Vn">
-                                                <rect key="frame" x="33" y="25" width="32" height="30"/>
+                                                <rect key="frame" x="216" y="5" width="32" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                 <state key="normal" title="&lt;---">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -605,18 +604,11 @@
                                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ReturnSegue" id="BuB-Po-VVc"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANO-Na-TcW">
-                                                <rect key="frame" x="33" y="63" width="81" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="LFz-4k-7Vn" firstAttribute="leading" secondItem="GtR-w5-4uV" secondAttribute="leading" constant="31" id="1Pe-an-OUN"/>
-                                            <constraint firstItem="LFz-4k-7Vn" firstAttribute="top" secondItem="GtR-w5-4uV" secondAttribute="top" constant="25" id="7z8-1v-GLA"/>
-                                            <constraint firstAttribute="trailing" secondItem="LFz-4k-7Vn" secondAttribute="trailing" constant="495" id="gDM-W2-JlC"/>
+                                            <constraint firstAttribute="trailing" secondItem="LFz-4k-7Vn" secondAttribute="trailing" constant="312" id="a8o-7e-B3T"/>
+                                            <constraint firstItem="LFz-4k-7Vn" firstAttribute="leading" secondItem="GtR-w5-4uV" secondAttribute="leading" constant="216" id="g3I-ef-qSs"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -624,9 +616,18 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LFz-4k-7Vn" firstAttribute="top" secondItem="zat-YX-TQ1" secondAttribute="bottom" constant="-1" id="Xfh-6x-8Ar"/>
+                            <constraint firstItem="LFz-4k-7Vn" firstAttribute="top" secondItem="zat-YX-TQ1" secondAttribute="bottom" constant="-6" id="itC-8m-jOI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="itC-8m-jOI"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="label" destination="ANO-Na-TcW" id="zDF-Lr-GKa"/>
+                        <outlet property="calcHistory" destination="4zm-8c-hnc" id="bb3-Fu-Ec1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNq-hO-S4R" userLabel="First Responder" sceneMemberID="firstResponder"/>

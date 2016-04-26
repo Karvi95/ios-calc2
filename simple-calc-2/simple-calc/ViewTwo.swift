@@ -10,29 +10,32 @@ import UIKit
 
 class ViewTwo: UIViewController {
     
-    @IBOutlet var label: UILabel!
-    var labelText = String()
+
+    var EquationsHistory : [String]!
+    
+    @IBOutlet weak var calcHistory: UIScrollView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = labelText
-        // Do any additional setup after loading the view.
+        
+        calcHistory.contentSize = CGSizeMake(200, 2500)
+        
+        var int: CGFloat = 30
+        for equation in EquationsHistory {
+            let label = UILabel(frame: CGRectMake(40, 100, 300, 21))
+            label.text = equation
+            label.textAlignment = NSTextAlignment.Left
+            label.textColor = UIColor.whiteColor()
+            label.center = CGPointMake(182, int)
+            int = int + 30
+            
+            self.calcHistory.addSubview(label)
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

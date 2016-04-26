@@ -309,19 +309,10 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func DisplayHistory(sender: UIButton) {
-        for i in 0..<oldInputs.count {
-            build += oldInputs[i]
-            build += "\n"
-        }
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "HistorySegue") {
             let DestViewController: ViewTwo = segue.destinationViewController as! ViewTwo
-            DestViewController.labelText = build
-           
-            NSLog("\n THIS IS MA HISTORY: " + build)
+            DestViewController.EquationsHistory = oldInputs
         }
     }
     override func viewDidLoad() {
