@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     let StoreNumbersModel : StoreNumbers = StoreNumbers()
     
     @IBOutlet weak var EvaluatedResults: UILabel!
+    @IBOutlet weak var label: UILabel!
     
     @IBAction func PressedZero(sender: UIButton) {
         if(StoreNumbersModel.elements.count > index) {
@@ -304,7 +305,6 @@ class ViewController: UIViewController {
             build += oldInputs[i]
             build += "\n"
         }
-        NSLog(build)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

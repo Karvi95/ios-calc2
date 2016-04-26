@@ -15,7 +15,7 @@ class ViewTwo: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        label.text = labelText
         // Do any additional setup after loading the view.
     }
 
