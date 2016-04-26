@@ -320,8 +320,8 @@ class ViewController: UIViewController {
         if (segue.identifier == "HistorySegue") {
             let DestViewController: ViewTwo = segue.destinationViewController as! ViewTwo
             DestViewController.labelText = build
-            // Now you have a pointer to the child view controller.
-            // You can save the reference to it, or pass data to it.
+           
+            NSLog("\n THIS IS MA HISTORY: " + build)
         }
     }
     override func viewDidLoad() {
