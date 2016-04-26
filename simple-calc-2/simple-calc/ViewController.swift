@@ -24,6 +24,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var EvaluatedResults: UILabel!
     @IBOutlet weak var label: UILabel!
     
+    @IBAction func Clear(sender: AnyObject) {
+        build = ""
+        eval = 0;
+        index = 0
+        display = ""
+        EvaluatedResults.text = "0"
+    }
+    
+    
     @IBAction func PressedZero(sender: UIButton) {
         if(StoreNumbersModel.elements.count > index) {
             StoreNumbersModel.elements[index] += "0"
