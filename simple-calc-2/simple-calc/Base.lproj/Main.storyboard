@@ -565,10 +565,10 @@
             </objects>
             <point key="canvasLocation" x="1842" y="628"/>
         </scene>
-        <!--View Controller-->
+        <!--View Two-->
         <scene sceneID="d4k-P5-04V">
             <objects>
-                <viewController id="gVk-og-Z3p" customClass="ViewController" customModule="simple_calc" sceneMemberID="viewController">
+                <viewController id="gVk-og-Z3p" customClass="ViewTwo" customModule="simple_calc" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zat-YX-TQ1"/>
                         <viewControllerLayoutGuide type="bottom" id="FUP-gh-Utc"/>
@@ -614,7 +614,7 @@
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="Historylist" destination="ANO-Na-TcW" id="dQM-1m-kq1"/>
+                        <outlet property="label" destination="ANO-Na-TcW" id="zDF-Lr-GKa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNq-hO-S4R" userLabel="First Responder" sceneMemberID="firstResponder"/>

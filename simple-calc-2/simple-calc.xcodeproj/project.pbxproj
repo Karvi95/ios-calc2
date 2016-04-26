@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D5B9A8A1CC7FDFB00297287 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B9A891CC7FDFB00297287 /* AppModel.swift */; };
+		9D8AAE631CCF19D10017C657 /* ViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8AAE621CCF19D10017C657 /* ViewTwo.swift */; };
 		9DDAA0421CC721600084C673 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDAA0411CC721600084C673 /* AppDelegate.swift */; };
 		9DDAA0441CC721600084C673 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDAA0431CC721600084C673 /* ViewController.swift */; };
 		9DDAA0471CC721600084C673 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDAA0451CC721600084C673 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		9D5B9A891CC7FDFB00297287 /* AppModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		9D8AAE621CCF19D10017C657 /* ViewTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTwo.swift; sourceTree = "<group>"; };
 		9DDAA03E1CC721600084C673 /* simple-calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "simple-calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDAA0411CC721600084C673 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DDAA0431CC721600084C673 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		9DDAA0401CC721600084C673 /* simple-calc */ = {
 			isa = PBXGroup;
 			children = (
+				9D8AAE621CCF19D10017C657 /* ViewTwo.swift */,
 				9DDAA0411CC721600084C673 /* AppDelegate.swift */,
 				9D5B9A891CC7FDFB00297287 /* AppModel.swift */,
 				9DDAA04A1CC721600084C673 /* LaunchScreen.storyboard */,
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DDAA0441CC721600084C673 /* ViewController.swift in Sources */,
+				9D8AAE631CCF19D10017C657 /* ViewTwo.swift in Sources */,
 				9D5B9A8A1CC7FDFB00297287 /* AppModel.swift in Sources */,
 				9DDAA0421CC721600084C673 /* AppDelegate.swift in Sources */,
 			);

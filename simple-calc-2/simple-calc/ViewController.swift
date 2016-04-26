@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     
     // History
     var oldInputs : [String] = []
-    @IBOutlet weak var Historylist: UILabel!
     
     // Store Numbers in an array
     let StoreNumbersModel : StoreNumbers = StoreNumbers()
@@ -301,24 +300,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func DisplayHistory(sender: UIButton) {
-        
         for i in 0..<oldInputs.count {
             build += oldInputs[i]
             build += "\n"
         }
-        
-        func viewDidLoad() {
-            Historylist.text = "\(build)"
-        }
-        
+        NSLog(build)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "HistorySegue") {
-            let historyController = segue.destinationViewController
-            if ((historyController.viewIfLoaded) != nil) {
-                Historylist.text = "HI"
-            }
+            let DestViewController: ViewTwo = segue.destinationViewController as! ViewTwo
+            DestViewController.labelText = build
             // Now you have a pointer to the child view controller.
             // You can save the reference to it, or pass data to it.
         }
