@@ -594,9 +594,9 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GtR-w5-4uV">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="555"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFz-4k-7Vn">
-                                                <rect key="frame" x="216" y="5" width="32" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFz-4k-7Vn">
+                                                <rect key="frame" x="216" y="14" width="97" height="69"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="47"/>
                                                 <state key="normal" title="&lt;---">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -617,14 +617,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="LFz-4k-7Vn" firstAttribute="top" secondItem="zat-YX-TQ1" secondAttribute="bottom" constant="-1" id="Xfh-6x-8Ar"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LFz-4k-7Vn" secondAttribute="trailing" constant="8" id="SPJ-2e-XvP"/>
                             <constraint firstItem="LFz-4k-7Vn" firstAttribute="top" secondItem="zat-YX-TQ1" secondAttribute="bottom" constant="-6" id="itC-8m-jOI"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="itC-8m-jOI"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="calcHistory" destination="4zm-8c-hnc" id="bb3-Fu-Ec1"/>
