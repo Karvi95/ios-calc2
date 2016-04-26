@@ -13,6 +13,8 @@ class ViewTwo: UIViewController {
 
     var EquationsHistory : [String]!
     
+    var saved : [String]!
+    
     @IBOutlet weak var calcHistory: UIScrollView!
     
     
@@ -31,6 +33,13 @@ class ViewTwo: UIViewController {
             int = int + 30
             
             self.calcHistory.addSubview(label)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "ReturnSegue") {
+            let DestViewController: ViewController = segue.destinationViewController as! ViewController
+            DestViewController.oldInputs = EquationsHistory
         }
     }
     

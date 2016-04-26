@@ -9,7 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-//  MARK: Properties
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    //  MARK: Properties
     var build = ""
     var eval = 0;
     var index = 0
@@ -22,7 +34,6 @@ class ViewController: UIViewController {
     let StoreNumbersModel : StoreNumbers = StoreNumbers()
     
     @IBOutlet weak var EvaluatedResults: UILabel!
-    @IBOutlet weak var label: UILabel!
     
     @IBAction func Clear(sender: AnyObject) {
         build = ""
@@ -313,18 +324,8 @@ class ViewController: UIViewController {
         if (segue.identifier == "HistorySegue") {
             let DestViewController: ViewTwo = segue.destinationViewController as! ViewTwo
             DestViewController.EquationsHistory = oldInputs
+            NSLog("MY OLD INPUTS: \(oldInputs)")
         }
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
