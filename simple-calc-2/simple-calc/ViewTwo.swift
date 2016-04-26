@@ -12,9 +12,7 @@ class ViewTwo: UIViewController {
     
 
     var EquationsHistory : [String]!
-    
-    var saved : [String]!
-    
+        
     @IBOutlet weak var calcHistory: UIScrollView!
     
     
