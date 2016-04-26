@@ -324,7 +324,6 @@ class ViewController: UIViewController {
         if (segue.identifier == "HistorySegue") {
             let DestViewController: ViewTwo = segue.destinationViewController as! ViewTwo
             DestViewController.EquationsHistory = oldInputs
-            NSLog("MY OLD INPUTS: \(oldInputs)")
         }
     }
 }
