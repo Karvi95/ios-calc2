@@ -303,16 +303,6 @@ class ViewController: UIViewController {
         
     }
     
-    // Initiate History
-    @IBAction func SegueToHistory(sender: UIButton) {
-        var build = ""
-        for i in 0..<oldInputs.count {
-            build += oldInputs[i]
-            build += "\n"
-        }
-        DisplayHistory.text = build
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
